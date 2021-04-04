@@ -3,7 +3,7 @@ services:
   api: # Ruby on Railsが起動するコンテナ
     build: .
     ports:
-      - '3000:3000' # localhostの3000ポートでアクセスできるようにする
+      - '3001:3000' # localhostの3000ポートでアクセスできるようにする
     volumes:
       - .:/rails6_api_mysql8 # アプリケーションファイルの同期
     depends_on:
