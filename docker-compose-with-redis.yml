@@ -1,0 +1,30 @@
+version: '3'
+services:
+  api: # Ruby on Railsが起動するコンテナ
+    build: .
+    ports:
+      - '3001:3000' # localhostの3000ポートでアクセスできるようにする
+    volumes:
+      - .:/rails6_api_mysql8 # アプリケーションファイルの同期
+    depends_on:
+      - db
+      - redis
+    command: ["./wait-for-it.sh", "db:3306", "--", "./start.sh"]
+  db: # MySQLが起動するコンテナ
+    image: mysql:8.0.21
+    volumes:
+      - mysql_data:/var/lib/mysql # データの永続化
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    command: --default-authentication-plugin=mysql_native_password # 認証方式を8系以前のものにする。
+    environment:
+      MYSQL_USER: 'webuser'
+      MYSQL_PASSWORD: 'webpass'
+      MYSQL_ROOT_PASSWORD: 'pass'
+      MYSQL_DATABASE: 'rails6_api_mysql8_development'
+  redis:
+    image: redis:6.2.1
+    volumes:
+      - redis-data:/data
+volumes:
+  mysql_data: # データボリュームの登録
+  redis-data:
