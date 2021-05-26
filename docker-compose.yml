@@ -6,6 +6,7 @@ services:
       - '3001:3000' # localhostの3000ポートでアクセスできるようにする
     volumes:
       - .:/rails6_api_mysql8 # アプリケーションファイルの同期
+      - gem_data:/usr/local/bundle
     depends_on:
       - db
     command: ["./wait-for-it.sh", "db:3306", "--", "./start.sh"]
@@ -22,3 +23,4 @@ services:
       MYSQL_DATABASE: 'rails6_api_mysql8_development'
 volumes:
   mysql_data: # データボリュームの登録
+  gem_data:
