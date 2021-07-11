@@ -10,39 +10,39 @@
 # Cop supports --auto-correct.
 # Configuration parameters: TreatCommentsAsGroupSeparators, ConsiderPunctuation, Include.
 # Include: **/*.gemfile, **/Gemfile, **/gems.rb
-Bundler/OrderedGems:
-  Exclude:
-    - 'Gemfile'
+#Bundler/OrderedGems:
+#  Exclude:
+#    - 'Gemfile'
 
 # Offense count: 1
 # Cop supports --auto-correct.
-Layout/EmptyLines:
-  Exclude:
-    - 'config/environments/development.rb'
+#Layout/EmptyLines:
+#  Exclude:
+#    - 'config/environments/development.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: AllowForAlignment, AllowBeforeTrailingComments, ForceEqualSignAlignment.
-Layout/ExtraSpacing:
-  Exclude:
-    - 'config/environments/production.rb'
+#Layout/ExtraSpacing:
+#  Exclude:
+#    - 'config/environments/production.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: AllowForAlignment, EnforcedStyleForExponentOperator.
 # SupportedStylesForExponentOperator: space, no_space
-Layout/SpaceAroundOperators:
-  Exclude:
-    - 'config/environments/production.rb'
+#Layout/SpaceAroundOperators:
+#  Exclude:
+#    - 'config/environments/production.rb'
 
 # Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBrackets.
 # SupportedStyles: space, no_space, compact
 # SupportedStylesForEmptyBrackets: space, no_space
-Layout/SpaceInsideArrayLiteralBrackets:
-  Exclude:
-    - 'config/environments/production.rb'
+#Layout/SpaceInsideArrayLiteralBrackets:
+#  Exclude:
+#    - 'config/environments/production.rb'
 
 # Offense count: 1
 # Configuration parameters: EnforcedStyle.
@@ -55,10 +55,10 @@ Rails/FilePath:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: nested, compact
-Style/ClassAndModuleChildren:
-  Exclude:
-    - 'test/channels/application_cable/connection_test.rb'
-    - 'test/test_helper.rb'
+#Style/ClassAndModuleChildren:
+#  Exclude:
+#    - 'test/channels/application_cable/connection_test.rb'
+#    - 'test/test_helper.rb'
 
 # Offense count: 2
 # Configuration parameters: AllowedConstants.
@@ -71,38 +71,38 @@ Style/Documentation:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: always, always_true, never
-Style/FrozenStringLiteralComment:
-  Enabled: false
+#Style/FrozenStringLiteralComment:
+#  Enabled: false
 
 # Offense count: 1
 # Cop supports --auto-correct.
-Style/GlobalStdStream:
-  Exclude:
-    - 'config/environments/production.rb'
+#Style/GlobalStdStream:
+#  Exclude:
+#    - 'config/environments/production.rb'
 
 # Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: SafeForConstants.
-Style/RedundantFetchBlock:
-  Exclude:
-    - 'config/puma.rb'
+#Style/RedundantFetchBlock:
+#  Exclude:
+#    - 'config/puma.rb'
 
 # Offense count: 28
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, ConsistentQuotesInMultiline.
 # SupportedStyles: single_quotes, double_quotes
-Style/StringLiterals:
-  Exclude:
-    - 'Gemfile'
-    - 'config/application.rb'
-    - 'config/environments/production.rb'
-    - 'config/puma.rb'
-    - 'config/spring.rb'
-    - 'test/channels/application_cable/connection_test.rb'
+#Style/StringLiterals:
+#  Exclude:
+#    - 'Gemfile'
+#    - 'config/application.rb'
+#    - 'config/environments/production.rb'
+#    - 'config/puma.rb'
+#    - 'config/spring.rb'
+#    - 'test/channels/application_cable/connection_test.rb'
 
 # Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: MinSize.
 # SupportedStyles: percent, brackets
-Style/SymbolArray:
-  EnforcedStyle: brackets
+#Style/SymbolArray:
+#  EnforcedStyle: brackets
