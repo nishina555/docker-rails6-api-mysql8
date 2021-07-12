@@ -62,10 +62,10 @@ Rails/FilePath:
 
 # Offense count: 2
 # Configuration parameters: AllowedConstants.
-Style/Documentation:
-  Exclude:
-    - 'app/models/application_record.rb'
-    - 'config/application.rb'
+#Style/Documentation:
+#  Exclude:
+#    - 'app/models/application_record.rb'
+#    - 'config/application.rb'
 
 # Offense count: 28
 # Cop supports --auto-correct.
