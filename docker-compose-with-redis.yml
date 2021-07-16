@@ -6,6 +6,7 @@ services:
       - '3001:3000' # localhostの3000ポートでアクセスできるようにする
     volumes:
       - .:/rails6_api_mysql8 # アプリケーションファイルの同期
+      - gem_data:/usr/local/bundle
     depends_on:
       - db
       - redis
@@ -27,4 +28,5 @@ services:
       - redis-data:/data
 volumes:
   mysql_data: # データボリュームの登録
+  gem_data:
   redis-data:
