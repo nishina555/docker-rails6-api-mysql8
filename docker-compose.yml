@@ -1,6 +1,8 @@
 version: '3'
 services:
-  api: # Ruby on Railsが起動するコンテナ
+  app: # Ruby on Railsが起動するコンテナ
+    tty: true
+    stdin_open: true
     build: .
     ports:
       - '3001:3000' # localhostの3000ポートでアクセスできるようにする
